@@ -1,0 +1,41 @@
+[data-grammar*="gfm"],
+.syntax--source.syntax--gfm {
+  .syntax--markup.syntax--underline.syntax--link {
+    color: @strong-cyan;
+
+    span.syntax--punctuation {
+      color: @pink;
+    }
+  }
+
+  .syntax--markup.syntax--strike {
+    position: relative;
+    color: fade(@syntax-text-color, 50%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% + 4px);
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: fade(@syntax-text-color, 50%);
+    }
+  }
+
+  .syntax--table .syntax--border {
+    color: fade(@syntax-text-color, 50%);
+  }
+
+  .syntax--markup.syntax--heading {
+    color: @blue;
+  }
+
+  .syntax--raw {
+    color: @green;
+  }
+
+  .syntax--italic {
+    color: @orange;
+  }
+}

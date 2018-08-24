@@ -1,0 +1,33 @@
+.syntax--json {
+  .syntax--constant {
+    color: @red;
+  }
+
+  .syntax--meta {
+    &.syntax--array.syntax--structure
+      .syntax--string.syntax--quoted.syntax--double {
+      color: @orange;
+
+      > * {
+        color: currentColor;
+      }
+    }
+
+    .syntax--punctuation.syntax--separator.syntax--key-value
+      + .syntax--string.syntax--quoted {
+      color: @orange;
+
+      * {
+        color: currentColor;
+      }
+    }
+
+    &.syntax--structure.syntax--key .syntax--string.syntax--quoted {
+      color: @blue;
+
+      .syntax--punctuation.syntax--string {
+        color: currentColor;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.syntax--js {
+  &.syntax--constant {
+    color: @pink;
+  }
+
+  &.syntax--entity {
+    &.syntax--name {
+      &.syntax--type {
+        color: @yellow;
+      }
+    }
+  }
+
+  &.syntax--object.syntax--console {
+    color: @yellow;
+  }
+
+  &.syntax--variable {
+    &.syntax--property,
+    &.syntax--other.syntax--object.syntax--property {
+      color: @light-cyan;
+    }
+
+    &.syntax--other.syntax--object {
+      color: @very-light-gray;
+    }
+  }
+
+  &.syntax--string.syntax--quoted.syntax--template {
+    .syntax--other.syntax--object.syntax--property,
+    .syntax--punctuation.syntax--quasi.syntax--definition {
+      color: @orange;
+    }
+  }
+
+  &.syntax--constant {
+    &.syntax--numeric {
+      color: @strong-orange;
+    }
+
+    &.syntax--label {
+      color: @syntax-text-color;
+    }
+
+    &.syntax--boolean {
+      color: @red;
+    }
+  }
+
+  &.syntax--punctuation.syntax--begin,
+  &.syntax--punctuation.syntax--end,
+  &.syntax--delimiter.syntax--object.syntax--comma,
+  &.syntax--brace.syntax--curly {
+    color: @cyan;
+
+    &.syntax--string {
+      color: @orange;
+    }
+
+    .syntax--comment & {
+      color: @syntax-comment-color;
+    }
+  }
+
+  &.syntax--regexp.syntax--string {
+    .syntax--punctuation {
+      color: @cyan;
+    }
+  }
+
+  &.syntax--import,
+  &.syntax--export {
+    .syntax--control,
+    .syntax--default {
+      color: @teal;
+    }
+  }
+
+  &.syntax--module {
+    &.syntax--all {
+      color: @red;
+    }
+  }
+}

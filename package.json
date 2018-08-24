@@ -1,0 +1,19 @@
+{
+  "name": "citrus",
+  "description": "Vibrant fruity colors.",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/atomiks/citrus-theme#readme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atomiks/citrus-theme.git"
+  },
+  "theme": "syntax",
+  "version": "0.0.0"
+}
